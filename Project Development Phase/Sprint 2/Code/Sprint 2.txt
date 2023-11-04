@@ -1,0 +1,428 @@
+LOGIN : 
+<!DOCTYPE html>
+<html >
+<head>
+<meta charset="UTF-8">
+<title>Plasma Donor App</title>
+<!-- <link href='https://fonts.googleapis.com/css?family=Pacifico' 
+rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' 
+rel='stylesheet' type='text/css'> -->
+<link href='https://fonts.googleapis.com/css?family=Hind:300'
+rel='stylesheet' type='text/css'>
+<link
+href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300'
+rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') 
+}}">
+<link rel="stylesheet" href="/static/style.css">
+<style>
+.login{
+top: 20%;
+}
+</style>
+</head>
+<body>
+<div class="background-image"></div>
+<div class="header">
+<div>Plasma Donor App</div>
+<ul>
+<li><a href="/register">Register</a></li>
+<li><a class="active" href="/login">Home</a></li>
+<li><a href="/about">About</a></li>
+</ul>
+</div>
+<div class="login" >
+<div>
+</div>
+<form action="{{ url_for('login')}}"method="post">
+<input type="text" name="user" placeholder="Enter UserName"
+required="required" style="color:black" />
+<input type="password" name="passw" placeholder="Enter Password"
+required="required" style="color:black" />
+<button type="submit" class="btn btn-primary btn-block btnlarge">Login</button>
+</form>
+<br><br>
+<div style="color:black">
+</div>
+</div>
+</body>
+<style>
+* {
+margin: 0;
+padding: 0;
+}
+.background-image {
+background-image: 
+url('https://media.istockphoto.com/id/539184209/photo/man-giving-blooddonation.jpg?s=612x612&w=0&k=20&c=vUYqEB1swHndxA5q71Gbpt0j8APTWtvyS0ucKpkVPPo=
+');
+background-size:cover;
+background-repeat: no-repeat;
+height: 100vh;
+}
+</style>
+</html>
+REGISTER : 
+<!DOCTYPE html>
+<html >
+<head>
+<meta charset="UTF-8">
+<title>Plasma Donor App</title>
+<link href='https://fonts.googleapis.com/css?family=Pacifico'
+rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo'
+rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300'
+rel='stylesheet' type='text/css'>
+<link
+href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300'
+rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='style1.css') 
+}}">
+<link rel="stylesheet" href="/static/style.css">
+<style>
+.login{
+top: 20%;
+}
+</style>
+</head>
+<body>
+<div class="bg-img">
+<div class="header">
+<div>Plasma Donor App</div>
+<ul>
+<li><a class="active" href="/login">Home</a></li>
+</ul>
+</div>
+<div class="login">
+<form action="{{ url_for('register')}}"method="post">
+<input type="text" name="name" placeholder="Enter Your Name"
+required="required" style="color:black"/>
+<input type="email" name="email" placeholder="Enter Email"
+required="required" style="color:black"/>
+<input type="text" name="phone" placeholder="Enter 10-digit mobile 
+number" required="required" style="color:black"/>
+<input type="city" name="city" placeholder="Enter Your City Name"
+required="required" style="color:black"/>
+<select name="infect">
+<option value="select" selected>Select COVID infection 
+status</option>
+<option value="infected">Infected</option>
+<option value="uninfected">Uninfected</option>
+</select>
+<select name="blood">
+<option value="select" selected>Choose your blood 
+group</option>
+<option value="O Positive">O Positive</option>
+<option value="A Positive">A Positive</option>
+<option value="B Positive">B Positive</option>
+<option value="AB Positive">AB Positive</option>
+<option value="O Negative">O Negative</option>
+<option value="A Negative">A Negative</option>
+<option value="B Negative">B Negative</option>
+<option value="AB Negative">AB Negative</option>
+</select>
+<input type="password" name="passw" placeholder="Enter Password"
+required="required" style="color:black"/>
+<!-- <button type="submit" class="btn btn-primary btn-block btnlarge">Register</button> -->
+<input type="submit" value="Submit">
+</form>
+<br><br>
+<div style="color:black">
+</div>
+</div>
+<style>
+.bg-img{
+backgroundimage:url('https://media.istockphoto.com/id/94916381/photo/bloodtest.jpg?s=612x612&w=0&k=20&c=m_FZ1lpR3u6cVPDfnyT3gPmZmO4LhQGzCjdeDdhN02k=') ;
+background-size:cover;
+background-repeat: no-repeat;
+height: 100vh;
+}
+</style>
+</div>
+</body>
+</html>
+Footer
+STYLE :
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+.btn { 
+display: inline-block; 
+*display: inline; 
+*zoom: 1; padding: 
+4px 10px 4px; 
+margin-bottom: 0; 
+font-size: 13px; 
+line-height: 18px; 
+color: #333333; 
+text-align: center;
+text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75); 
+vertical-align: middle; 
+background-color: #f5f5f5; 
+background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6); 
+background-image: -ms-linear-gradient(top, #ffffff, #e6e6e6); 
+background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), 
+to(#e6e6e6)); 
+background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6); 
+background-image: -o-linear-gradient(top, #ffffff, #e6e6e6); 
+background-image: linear-gradient(top, #ffffff, #e6e6e6); 
+background-repeat: repeat-x; 
+filter: progid:dximagetransform.microsoft.gradient(startColorstr=#ffffff, 
+endColorstr=#e6e6e6, GradientType=0); 
+border-color: #e6e6e6 #e6e6e6 #e6e6e6; 
+border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25); 
+border: 1px solid #e6e6e6; 
+-webkit-border-radius: 4px; 
+-moz-border-radius: 4px; 
+border-radius: 4px; 
+-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px
+rgba(0, 0, 0, 0.05); 
+-moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 
+0, 0, 0.05); 
+box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 
+0, 0.05); 
+cursor: pointer; *margin-left: .3em; 
+}
+.btn:hover, .btn:active, .btn.active, .btn.disabled, .btn[disabled] { 
+background-color: #e6e6e6; }
+.btn-large { 
+padding: 9px 14px; 
+font-size: 15px; 
+line-height: normal; 
+-webkit-border-radius: 5px; 
+-moz-border-radius: 5px; 
+border-radius: 5px; 
+}
+.btn:hover { 
+color: #333333; 
+text-decoration: none; 
+background-color: #e6e6e6; 
+background-position: 0 -15px; 
+-webkit-transition: background-position 0.1s linear; 
+-moz-transition: background-position 0.1s linear; 
+-ms-transition: background-position 0.1s linear; 
+-o-transition: background-position 0.1s linear; 
+transition: background-position 0.1s linear; 
+}
+.btn-primary, .btn-primary:hover { 
+text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25); 
+color: #ffffff; 
+}
+.btn-primary.active { color: rgba(255, 255, 255, 0.75); }
+.btn-primary { 
+background-color: #4a77d4; 
+background-image: -moz-linear-gradient(top, #6eb6de, #4a77d4); 
+background-image: -ms-linear-gradient(top, #6eb6de, #4a77d4); 
+background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#6eb6de), 
+to(#4a77d4)); 
+background-image: -webkit-linear-gradient(top, #6eb6de, #4a77d4); 
+background-image: -o-linear-gradient(top, #6eb6de, #4a77d4); 
+background-image: linear-gradient(top, #6eb6de, #4a77d4); 
+background-repeat: repeat-x; 
+filter: progid:dximagetransform.microsoft.gradient(startColorstr=#6eb6de, 
+endColorstr=#4a77d4, GradientType=0); 
+border: 1px solid #3762bc; 
+text-shadow: 1px 1px 1px rgba(0,0,0,0.4); 
+box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 
+0, 0.5); 
+}
+.btn-primary:hover, .btn-primary:active, .btn-primary.active, .btnprimary.disabled, .btn-primary[disabled] { 
+filter: none; 
+background-color: #4a77d4; 
+}
+.btn-block { width: 100%; display:block; }
+* { -webkit-box-sizing:border-box; -moz-box-sizing:border-box; -ms-boxsizing:border-box; -o-box-sizing:border-box; box-sizing:border-box; }
+html { width: 100%; height:100%; overflow:hidden; }
+body { 
+width: 100%;
+height:100%;
+font-family: 'Open Sans', sans-serif;
+background: fffff;
+color: #000000;
+font-size: 18px;
+text-align:center;
+letter-spacing:1.2px;
+}
+.header { 
+top:0; 
+margin:0px;
+left: 0px;
+right: 0px;
+position: fixed;
+background: #4a77d4;
+color: white;
+box-shadow: 0px 8px 4px grey;
+overflow: hidden;
+padding: 15px;
+font-size: 1.5vw;
+width: 100%;
+text-align: center;
+}
+.login { 
+position: absolute;
+top: 70%;
+left: 50%;
+margin: -25px 0 0 -150px;
+width:400px;
+height:400px;
+}
+.header div { color: #fff; text-shadow: 0 0 10px rgba(0,0,0,0.3); letterspacing:1px; text-align:center; float:left; padding-left:150px;}
+ul {
+list-style-type: none;
+margin: 0;
+padding: 0;
+padding-right:150px;
+overflow: hidden;
+}
+li {
+float: right;
+}
+li a {
+display: block;
+color: white;
+text-align: center;
+padding: 0px 15px;
+text-decoration: none;
+}
+input { 
+width: 100%; 
+margin-bottom: 10px; 
+background: rgba(255,255,255,255);
+border: none;
+outline: none;
+padding: 10px;
+font-size: 13px;
+color: black;
+text-shadow: black;
+border: 1px solid rgba(0,0,0,0.3);
+border-radius: 4px;
+box-shadow: inset 0 -5px 45px rgba(100,100,100,0.2), 0 1px 1px
+rgba(255,255,255,0.2);
+-webkit-transition: box-shadow .5s ease;
+-moz-transition: box-shadow .5s ease;
+-o-transition: box-shadow .5s ease;
+-ms-transition: box-shadow .5s ease;
+transition: box-shadow .5s ease;
+}
+input:focus { box-shadow: inset 0 -5px 45px rgba(100,100,100,0.4), 0 1px 1px
+rgba(255,255,255,0.2); }
+select { 
+width: 100%; 
+margin-bottom: 10px; 
+background: rgba(255,255,255,255);
+border: none;
+outline: none;
+padding: 10px;
+font-size: 13px;
+color: #000000;
+text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+border: 1px solid rgba(0,0,0,0.3);
+border-radius: 4px;
+box-shadow: inset 0 -5px 45px rgba(100,100,100,0.2), 0 1px 1px
+rgba(255,255,255,0.2);
+-webkit-transition: box-shadow .5s ease;
+-moz-transition: box-shadow .5s ease;
+-o-transition: box-shadow .5s ease;
+-ms-transition: box-shadow .5s ease;
+transition: box-shadow .5s ease;
+}
+APP FILE:
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Sep 26 14:27:20 2022
+@author: user
+"""
+from flask import Flask,render_template, request,redirect,url_for,session
+import ibm_db
+import re
+app=Flask(__name__)
+app.secret_key= 'a'
+conn = ibm_db.connect("DATABASE=bludb;HOSTNAME=fbd88901-ebdb-4a4f-a32e9822b9fb237b.c1ogj3sd0tgtu0lqde00.databases.appdomain.cloud;PORT=32731;SECURIT
+Y=SSL;SSLServerCertificate=DigiCertGlobalRootCA.crt;UID=nms09877;PWD=0AEuG3bIm
+XTyoxfU",'','')
+# def home():
+# return render_template('home.html') 
+@app.route('/login',methods =['GET', 'POST'])
+def login():
+global userid
+msg = ''
+if request.method == 'POST' :
+username = request.form['user']
+password = request.form['passw']
+sql = "SELECT * FROM user WHERE username =? AND password=?"
+stmt = ibm_db.prepare(conn, sql)
+ibm_db.bind_param(stmt,1,username)
+ibm_db.bind_param(stmt,2,password)
+ibm_db.execute(stmt)
+account = ibm_db.fetch_assoc(stmt)
+print (account)
+if account:
+session['loggedin'] = True
+session['id'] = account['USERNAME']
+userid= account['USERNAME']
+session['username'] = account['USERNAME']
+msg = 'Logged in successfully !'
+return render_template('display.html', msg = msg)
+else:
+msg = 'Incorrect username / password !'
+return render_template('login.html', msg = msg)
+@app.route('/register', methods =['GET', 'POST'])
+def register():
+msg = ''
+if request.method == 'POST' :
+username = request.form['name']
+email = request.form['email']
+phone_number = request.form['phone']
+city = request.form['city']
+covid_status = request.form['infect']
+blood_group = request.form['blood']
+password = request.form['passw']
+sql = "SELECT * FROM user WHERE username =?"
+stmt = ibm_db.prepare(conn, sql)
+ibm_db.bind_param(stmt,1,username)
+ibm_db.execute(stmt)
+account = ibm_db.fetch_assoc(stmt)
+print(account)
+if account:
+msg = 'Account already exists !'
+elif not re.match(r'[^@]+@[^@]+\.[^@]+', email):
+msg = 'Invalid email address !'
+elif not re.match(r'[A-Za-z0-9]+', username):
+msg = 'name must contain only characters and numbers !'
+else:
+insert_sql = "INSERT INTO user VALUES (?, ?, ?, ? , ? , ? , ?)"
+prep_stmt = ibm_db.prepare(conn, insert_sql)
+ibm_db.bind_param(prep_stmt, 1, username)
+ibm_db.bind_param(prep_stmt, 2, email)
+ibm_db.bind_param(prep_stmt, 3, phone_number)
+ibm_db.bind_param(prep_stmt, 4, city)
+ibm_db.bind_param(prep_stmt, 5, covid_status)
+ibm_db.bind_param(prep_stmt, 6, blood_group)
+ibm_db.bind_param(prep_stmt, 7, password)
+ibm_db.execute(prep_stmt)
+msg = 'You have successfully registered !'
+elif request.method == 'POST':
+msg = 'Please fill out the form !'
+return render_template('register.html', msg = msg)
+@app.route('/display', methods =['GET', 'POST'])
+def display():
+if request.method == 'POST':
+blood_group = request.form['blood']
+city = request.form['city']
+sql = 'SELECT * FROM user WHERE blood_group = ? and city = ? '
+prep_stmt = ibm_db.prepare(conn, sql)
+ibm_db.bind_param(prep_stmt, 1, blood_group)
+ibm_db.bind_param(prep_stmt, 2, city)
+ibm_db.execute(prep_stmt)
+data = ibm_db.fetch_assoc(prep_stmt)
+print("datadisplay",data)
+msg = 'Data Fetch successful'
+return render_template('display.html',data = data)
+return render_template('display.html')
+@app.route('/logout')
+def logout():
+session.pop('loggedin', None)
+session.pop('id', None)
+session.pop('username', None)
+return render_template('login.html')
+if __name__ == '__main__':
+app.run(host='0.0.0.0')
